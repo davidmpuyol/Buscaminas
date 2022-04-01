@@ -158,5 +158,9 @@ function iniciarJuego(){
 
 var buscaminas;
 iniciarJuego();
-
+$(document).on('taphold', function(event){
+    let fila = event.target.parentElement.rowIndex;
+    let columna = event.target.cellIndex;
+    colocarBandera(fila,columna);
+})
 //document.getElementById("buscaminasVista").appendChild(buscaminas.getTabla());
